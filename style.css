@@ -1,3 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap");
+:root {
+    --primary-light: #fff;
+    --primary-dark: #2c2f33;
+    --secondary-dark: #393e50;
+    --secondary-dark-hover: #4a4f57;
+    --secondary-dark-active: #5b5f68;
+    --header: #23272a;
+    --primary-blue: #9dacff;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid white; */
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
 body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: var(--header);
+    text-align: center;
+    padding: 32px;
+    box-shadow: 0px 0px 8px #1e2023;
+}
+h1 {
+    font-family: "Rubik Vinyl", cursive;
+    font-size: 3rem;
+    color: var(--primary-blue);
+}
+.game-field {
+    text-align: center;
+    margin: 64px 0;
+    color: inherit;
+}
+.game-field .board h2 {
+    margin-bottom: 16px;
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+.game-field .board h4 {
+    font-weight: lighter;
+}
+
+.game-field .field {
+    width: 400px;
+    margin: 16px auto;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+.game-field .field .players {
+    width: 170px;
+    text-align: center;
+}
+.game-field .field .players .icon {
+    font-size: 6rem;
+    color: var(--primary-blue);
+    margin-bottom: 8px;
+}
+.game-field .field .players .score {
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+.game-field .user-weapons {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 16px;
+}
+.game-field .weapons {
+    min-width: 128px;
+    min-height: 128px;
+    border-radius: 16px;
+    background-color: var(--secondary-dark);
+    color: white;
+    font-family: "Rubik Vinyl", cursive;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 0px 8px #1e2023;
+    padding: 16px;
+}
+
+.game-field .weapons .weapon-icon {
+    font-size: 3.3rem;
+    margin-bottom: 8px;
+}
+.modal {
+    z-index: 3;
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: 200ms ease-in-out;
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+    text-align: center;
+    width: fit-content;
+    /* margin: auto; */
+    padding: 64px;
+    border-radius: 16px;
+}
+.modal.active {
+    display: block;
+}
+.modal .modal-title {
+    font-size: 3rem;
+    font-weight: bolder;
+    margin-bottom: 8px;
+    color: var(--primary-blue);
+}
+.modal .modal-text {
+    font-size: 2.2rem;
+    font-weight: lighter;
+    margin-bottom: 8px;
+}
+.modal .btn-restart {
+    background-color: var(--secondary-dark);
+    border: none;
+    color: inherit;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+.game-field .weapons:hover,
+.modal .btn-restart:hover {
+    background-color: var(--secondary-dark-hover);
+}
+.game-field .weapons:active,
+.modal .btn-restart:active {
+    background-color: var(--secondary-dark-active);
+}
+.overlay {
+    display: none;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-dark);
+    opacity: 0.6;
+}
+.overlay.active {
+    display: block;
+}
+/* Footer Styling */
+.footer {
+    /* position: absolute;
+    bottom: 0;
+    left: 0; */
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    color: var(--primary-dark);
     font-family: sans-serif;
+    font-size: 20px;
+}
+.github-link {
+    font-size: 2rem;
+    transition: all 0.1s ease-in-out, font-size;
+}
+.github-link:hover {
+    color: var(--primary-blue);
+    scale: 1.1;
 }

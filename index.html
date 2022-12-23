@@ -1,18 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+        <script
+            src="https://kit.fontawesome.com/e61ab25a37.js"
+            crossorigin="anonymous"
+        ></script>
+        <!-- font awesome-->
+        <link rel="stylesheet" href="style.css" />
+        <script defer src="main.js"></script>
+        <title>Dasezo | Rock Paper Scissors</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Dasezo | Rock Paper Scissors</title>
-</head>
-
-<body>
-    <h1>Welcome to Rock Paper Scissors Game</h1>
-
-    <script src="main.js"></script>
-</body>
-
+    <body>
+        <header class="header">
+            <h1 class="animate__animated animate__backInDown">
+                <span class="title">Rock</span> <span class="title">Paper</span>
+                <span class="title">Scissors</span>
+            </h1>
+        </header>
+        <main class="game-field animate__animated animate__backInUp">
+            <div class="board">
+                <h2 id="message" class="animate__animated">
+                    Choose Your Weapon
+                </h2>
+                <h4 id="hint">
+                    First to reach 5 points (wins 5 rounds) & beat the Ghost :')
+                </h4>
+            </div>
+            <div class="field">
+                <div class="players user">
+                    <div id="user-icon" class="icon">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <p class="score">User: <span id="user-score">0</span></p>
+                </div>
+                <div class="players ghost">
+                    <div id="ghost-icon" class="icon">
+                        <i class="fa-solid fa-ghost"></i>
+                    </div>
+                    <p class="score">ghost: <span id="ghost-score">0</span></p>
+                </div>
+            </div>
+            <div class="user-weapons">
+                <button id="rock-btn" class="weapons">
+                    <span class="weapon-icon"
+                        ><i class="fa-regular fa-hand-back-fist"></i
+                    ></span>
+                    <p>Rock</p>
+                </button>
+                <button id="scissor-btn" class="weapons">
+                    <span class="weapon-icon"
+                        ><i class="fa-regular fa-hand-scissors"></i
+                    ></span>
+                    <p>Scissor</p>
+                </button>
+                <button id="paper-btn" class="weapons">
+                    <span class="weapon-icon"
+                        ><i class="fa-regular fa-hand"></i
+                    ></span>
+                    <p>Paper</p>
+                </button>
+            </div>
+        </main>
+        <div class="modal animate__animated" id="result-modal">
+            <p class="modal-title animate__animated" id="result-msg">who won</p>
+            <p class="modal-text" id="finale-score">5-5</p>
+            <button class="btn btn-restart" id="restart-btn">
+                <i class="fa-solid fa-rotate-right"></i> Play again
+            </button>
+        </div>
+        <div class="overlay" id="overlay"></div>
+        <footer class="footer animate__animated animate__slideInUp">
+            <span>Copyright &copy; 2022 <strong>Dasezo</strong></span>
+            <a
+                class="github-link"
+                href="https://github.com/Dasezo"
+                target="_blank"
+            >
+                <i class="fa-brands fa-square-github"></i>
+            </a>
+        </footer>
+    </body>
 </html>
