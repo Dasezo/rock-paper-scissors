@@ -8,7 +8,7 @@
 
 ### What is this?
 
-    This project is a submission for [TOP](https://www.theodinproject.com/) challenge to practice some JavaScript DOM manipulating fundamentals.
+This project is a submission for [TOP](https://www.theodinproject.com/) challenge to practice some JavaScript DOM manipulating fundamentals.
 
 ---
 
