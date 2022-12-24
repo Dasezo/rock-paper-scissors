@@ -183,3 +183,31 @@ h1 {
     color: var(--primary-blue);
     scale: 1.1;
 }
+
+@media (max-width: 480px) {
+    .header {
+        padding: 16px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    .game-field {
+        margin: 32px 0;
+        padding: 16px;
+    }
+    .game-field .field {
+        width: 100%;
+    }
+    .game-field .board h2 {
+        font-size: 1.6rem;
+    }
+
+    .game-field .weapons {
+        min-width: 98px;
+        min-height: 98px;
+        margin-top: 48px;
+    }
+    .game-field .weapons .weapon-icon {
+        font-size: 1.8rem;
+    }
+}
